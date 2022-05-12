@@ -1,6 +1,6 @@
 import React from "react";
 
-import defaultAvatarPath from "images/image.png";
+import defaultAvatarPath from "../images/image.png";
 import Api from "../utils/api";
 
 import Card from "./Card";

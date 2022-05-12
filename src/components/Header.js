@@ -1,4 +1,4 @@
-import logoPath from "images/logonorm.svg";
+import logoPath from "../images/logonorm.svg";
 
 const Header = () => {
   return (
