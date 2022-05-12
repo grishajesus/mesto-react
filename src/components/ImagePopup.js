@@ -32,4 +32,4 @@ const ImagePopup = (props) => {
   );
 };
 
-export { ImagePopup };
+export default ImagePopup;

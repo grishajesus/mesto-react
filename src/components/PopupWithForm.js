@@ -23,4 +23,4 @@ const PopupWithForm = (props) => {
   );
 };
 
-export { PopupWithForm };
+export default PopupWithForm;

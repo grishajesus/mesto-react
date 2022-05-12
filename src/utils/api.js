@@ -98,9 +98,9 @@ class Api {
   }
 }
 
-const api = new Api({
+const instance = new Api({
   baseUrl: "https://nomoreparties.co/v1/cohort-28",
   headers: { authorization: "d70652f2-87da-4c2e-8e5b-697807750bdf" },
 });
 
-export { api };
+export default instance;

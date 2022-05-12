@@ -1,9 +1,9 @@
 import React from "react";
 
 import defaultAvatarPath from "images/image.png";
-import { api } from "utils/api";
+import Api from "../utils/api";
 
-import { Card } from "./Card";
+import Card from "./Card";
 
 const Main = (props) => {
   const { onEditAvatar, onEditProfile, onAddPlace, onCardClick } = props;
@@ -16,7 +16,7 @@ const Main = (props) => {
 
   React.useEffect(() => {
     const fetchUserData = async () => {
-      const userData = await api.getCurrentUser();
+      const userData = await Api.getCurrentUser();
 
       setUserName(userData.name);
       setUserDescription(userData.about);
@@ -28,7 +28,7 @@ const Main = (props) => {
 
   React.useEffect(() => {
     const fetchCards = async () => {
-      const cardsData = await api.getPlaces();
+      const cardsData = await Api.getPlaces();
 
       setCards(cardsData);
     };
@@ -75,4 +75,4 @@ const Main = (props) => {
   );
 };
 
-export { Main };
+export default Main;
