@@ -16,11 +16,15 @@ const Main = (props) => {
 
   React.useEffect(() => {
     const fetchUserData = async () => {
-      const userData = await Api.getCurrentUser();
+      try {
+        const userData = await Api.getCurrentUser();
 
-      setUserName(userData.name);
-      setUserDescription(userData.about);
-      setUserAvatar(userData.avatar);
+        setUserName(userData.name);
+        setUserDescription(userData.about);
+        setUserAvatar(userData.avatar);
+      } catch (error) {
+        console.error("fetchUserData error", error);
+      }
     };
 
     fetchUserData();
@@ -28,9 +32,13 @@ const Main = (props) => {
 
   React.useEffect(() => {
     const fetchCards = async () => {
-      const cardsData = await Api.getPlaces();
+      try {
+        const cardsData = await Api.getPlaces();
 
-      setCards(cardsData);
+        setCards(cardsData);
+      } catch (error) {
+        console.error("fetchCards error", error);
+      }
     };
 
     fetchCards();

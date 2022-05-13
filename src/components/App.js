@@ -46,6 +46,7 @@ const App = () => {
       <PopupWithForm
         name="edit-profile"
         title="Редактировать профиль"
+        buttonText="Сохранить"
         isOpen={isEditAvatarPopupOpen}
         onClose={closeAllPopups}
       >
@@ -74,18 +75,12 @@ const App = () => {
           />
           <span className="popup__input-error" id="about-error"></span>
         </div>
-
-        <button
-          type="submit"
-          className="popup__submit-button popup__submit-button_error"
-        >
-          Сохранить
-        </button>
       </PopupWithForm>
 
       <PopupWithForm
         name="add-place"
         title="Новое место"
+        buttonText="Сохранить"
         isOpen={isEditProfilePopupOpen}
         onClose={closeAllPopups}
       >
@@ -112,15 +107,12 @@ const App = () => {
           />
           <span className="popup__input-error" id="link-error"></span>
         </div>
-
-        <button disabled type="submit" className="popup__submit-button">
-          Сохранить
-        </button>
       </PopupWithForm>
 
       <PopupWithForm
         name="edit-avatar"
         title="Обновить аватар"
+        buttonText="Сохранить"
         isOpen={isAddPlacePopupOpen}
         onClose={closeAllPopups}
       >
@@ -134,20 +126,9 @@ const App = () => {
           />
           <span className="popup__input-error" id="avatar-error"></span>
         </div>
-
-        <button
-          type="submit"
-          className="popup__submit-button popup__submit-button_error"
-        >
-          Сохранить
-        </button>
       </PopupWithForm>
 
-      <PopupWithForm name="sure" title="Вы уверены?">
-        <button type="submit" className="popup__submit-button">
-          Да
-        </button>
-      </PopupWithForm>
+      <PopupWithForm name="sure" title="Вы уверены?" buttonText="Сохранить" />
 
       <ImagePopup card={selectedCard} onClose={closeAllPopups} />
     </div>
