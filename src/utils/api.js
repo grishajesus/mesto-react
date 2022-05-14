@@ -89,6 +89,14 @@ class Api {
     }).then(this._handleResponse);
   }
 
+  changeLikeCardStatus(cardId, isLiked) {
+    if (isLiked) {
+      return this.deleteLike(cardId);
+    }
+
+    return this.createLike(cardId);
+  }
+
   _handleResponse(response) {
     if (response.ok) {
       return response.json();

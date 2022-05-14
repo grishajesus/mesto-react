@@ -10,6 +10,11 @@
   transition: opacity 0.2s;
 }
 
+.place-card__delete_hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
 .place-card__delete:hover {
   opacity: 0.8;
 }
