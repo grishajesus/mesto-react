@@ -21,16 +21,16 @@ const EditProfilePopup = (props) => {
     }
   };
 
-  React.useEffect(() => {
-    setName(currentUser.name ?? "");
-    setDescription(currentUser.about ?? "");
-  }, [currentUser]);
-
   const handleSubmit = (event) => {
     event.preventDefault();
 
     onUpdateUser({ name, about: description });
   };
+
+  React.useEffect(() => {
+    setName(currentUser.name ?? "");
+    setDescription(currentUser.about ?? "");
+  }, [currentUser, isOpen]);
 
   return (
     <PopupWithForm
